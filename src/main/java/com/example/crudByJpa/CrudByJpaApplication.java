@@ -21,7 +21,7 @@ public class CrudByJpaApplication {
 			//createStudentObject(student);
 			//readStudentData(student);
 			//getAllDataFromTable(student);
-			//getDataByLastName(student);
+			getDataByLastName(student);
 			updateData(student);
 		};
 	}
