@@ -48,4 +48,18 @@ public class StudentDAOImple implements StudentDAO{
     public void update(Student student) {
         entityManager.merge(student);
     }
+
+    @Override
+    @Transactional
+    public void delete(Long id) {
+     Student student1=entityManager.find(Student.class,id);
+     entityManager.remove(student1);
+    }
+
+    @Override
+    @Transactional
+    public int deleteAll() {
+        int row=entityManager.createQuery("DELETE from Student ").executeUpdate();
+        return row;
+    }
 }

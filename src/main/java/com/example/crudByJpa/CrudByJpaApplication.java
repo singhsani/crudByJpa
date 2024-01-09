@@ -21,9 +21,19 @@ public class CrudByJpaApplication {
 			//createStudentObject(student);
 			//readStudentData(student);
 			//getAllDataFromTable(student);
-			getDataByLastName(student);
-			updateData(student);
+			//getDataByLastName(student);
+			//updateData(student);
+			//deleteStudentDetail(student);
+			deleteAllData(student);
 		};
+	}
+
+	private void deleteAllData(StudentDAO student) {
+		System.out.println(student.deleteAll());
+	}
+
+	private void deleteStudentDetail(StudentDAO student) {
+		 student.delete(1l);
 	}
 
 	private void updateData(StudentDAO student) {
